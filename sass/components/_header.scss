@@ -1,0 +1,136 @@
+@import "../sass/utils/vars";
+@import "../sass/base/base";
+
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+  text-decoration: none;
+
+  &__span {
+    color: $colorBlue;
+  }
+
+  &--logo--color-white {
+    color: $colorWhite;
+  }
+}
+
+.navigate {
+  margin: 32px 350px 32px auto;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item-studio,
+  &__item-portofolio,
+  &__item {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.42;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $lightBlack;
+    &:hover {
+      color: $hoverColor;
+      transition: $pageTransition;
+    }
+    &:focus {
+      color: $hoverColor;
+      transition: $pageTransition;
+    }
+  }
+}
+
+.portofolio-page .navigate__item-portofolio::after,
+.studio-page .navigate__item-studio::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: $colorBlue;
+  border-radius: 2px;
+  top: 49px;
+  left: 0;
+  transition: $pageTransition;
+}
+
+.contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  padding: 28px 0 0 0;
+  gap: 12px;
+
+  &--flex-direction {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+  }
+
+  &__address-item {
+    line-height: 16px;
+    text-decoration: none;
+    font-style: normal;
+    color: $colorWhite;
+  }
+
+  &__item {
+    line-height: 16px;
+    color: $mediumGrey;
+    text-decoration: none;
+    font-style: normal;
+    &--color-light {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &:hover {
+    color: $hoverColor;
+    transition: $pageTransition;
+    cursor: $pageCursor;
+  }
+  &:focus {
+    color: $hoverColor;
+    transition: $pageTransition;
+    cursor: $pageCursor;
+  }
+
+  &__icon {
+    fill: $mediumGrey;
+    margin-right: 6px;
+
+    &:hover {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+
+    &:focus {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+}
