@@ -1,0 +1,735 @@
+@import "../sass/utils/vars";
+@import "../sass/base/base";
+@import "../sass/components/index";
+@import "../sass/components/portofolio" .container {
+  width: $containerWidth;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+  text-decoration: none;
+
+  &__span {
+    color: $colorBlue;
+  }
+
+  &--logo--color-white {
+    color: $colorWhite;
+  }
+}
+
+.navigate {
+  margin: 32px 350px 32px auto;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item-studio,
+  &__item-portofolio,
+  &__item {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.42;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $lightBlack;
+    &:hover {
+      color: $hoverColor;
+      transition: $pageTransition;
+    }
+    &:focus {
+      color: $hoverColor;
+      transition: $pageTransition;
+    }
+  }
+}
+
+.portofolio-page .navigate__item-portofolio::after,
+.studio-page .navigate__item-studio::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: $colorBlue;
+  border-radius: 2px;
+  top: 49px;
+  left: 0;
+  transition: $pageTransition;
+}
+
+.contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  padding: 28px 0 0 0;
+  gap: 12px;
+
+  &--flex-direction {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+  }
+
+  &__address-item {
+    line-height: 16px;
+    text-decoration: none;
+    font-style: normal;
+    color: $colorWhite;
+  }
+
+  &__item {
+    line-height: 16px;
+    color: $mediumGrey;
+    text-decoration: none;
+    font-style: normal;
+    &--color-light {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &:hover {
+    color: $hoverColor;
+    transition: $pageTransition;
+    cursor: $pageCursor;
+  }
+  &:focus {
+    color: $hoverColor;
+    transition: $pageTransition;
+    cursor: $pageCursor;
+  }
+
+  &__icon {
+    fill: $mediumGrey;
+    margin-right: 6px;
+
+    &:hover {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+
+    &:focus {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+}
+
+.first-section {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 180%, #c4c4c4 300%),
+    url("../images/main-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: $elementsGap;
+
+  &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    color: $colorWhite;
+    text-align: center;
+    margin: 200px 0 0 0;
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    letter-spacing: 0.06em;
+    margin: 0 auto 200px auto;
+    padding: 10px 20px;
+    background-color: $colorBlue;
+    color: $colorWhite;
+    cursor: $pageCursor;
+    transition: $pageTransition;
+  }
+}
+.backdrop {
+  display: flex;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(0, 0%, 0%, 0.5);
+}
+
+.is-hidden {
+  transition: $pageTransition;
+  visibility: hidden;
+  opacity: initial;
+}
+
+.modal {
+  position: relative;
+  box-sizing: border-box;
+  width: 528px;
+  height: 581px;
+  background: $colorWhite;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin: auto;
+  transition: $pageTransition;
+
+  &__icon {
+    display: inline-block;
+    fill: black;
+
+    &:hover {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+    &:focus {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    top: 8px;
+    right: 8px;
+    color: black;
+    background: $colorWhite;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: $pageTransition;
+
+    &:hover {
+      color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+    &:focus {
+      color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+}
+
+.form {
+  margin: 40px;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $mediumGrey;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 29px;
+    left: 14px;
+    z-index: 2;
+  }
+
+  &-textarea:focus-visible,
+  &__input:focus-visible {
+    outline: none;
+  }
+
+  textarea::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &__span {
+    color: $colorBlue;
+    text-decoration: underline;
+    line-height: 24px;
+  }
+
+  &__textarea {
+    resize: none;
+    padding: 12px 0 0 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $colorWhite;
+    background: $colorBlue;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    padding: 10px 80px;
+    margin: 30px auto 0 auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover {
+      color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+    &:focus {
+      color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+
+  &__input {
+    position: relative;
+    box-sizing: border-box;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin: 4px 0 10px 0;
+    padding: 0;
+  }
+}
+
+.form-terms {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  line-height: 24px;
+  color: $mediumGrey;
+  margin: 20px 0 0 10px;
+
+  .form-terms input[type="checkbox"] {
+    display: none;
+  }
+
+  .form-terms input[type="checkbox"]:checked + .form-terms__box-icon {
+    background: $colorBlue;
+    border-color: $colorBlue;
+  }
+
+  &__checkmark {
+    fill: $colorWhite;
+    position: absolute;
+    top: 7px;
+    left: 2px;
+  }
+
+  &__box-icon {
+    position: relative;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $lightBlack;
+    border-radius: 2px;
+  }
+}
+
+.section {
+  margin: 93px 0 0 0;
+
+  &--grey-background {
+    background: #f5f4fa;
+    padding-bottom: 94px;
+  }
+
+  .section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: $lightBlack;
+  }
+
+  &--padding {
+    padding-top: 93px;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  gap: $elementsGap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &--gap {
+    gap: 94px;
+    padding: 60px 0;
+  }
+
+  &--flex-direction {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__icon {
+    fill: $lightBlack;
+    background: #f5f4fa;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $lightBlack;
+    padding: 30px 0 0 0;
+    margin: 0;
+
+    &--color-white {
+      color: $colorWhite;
+    }
+  }
+
+  &__description {
+    line-height: 24px;
+    color: $mediumGrey;
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    padding: 50px 0 0 0;
+    margin: 0;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__title--label {
+    margin: 0;
+    color: $colorWhite;
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    color: $colorWhite;
+    padding: 27px;
+  }
+
+  &__card {
+    margin: 50px 0 0 0;
+    box-shadow: $portofolioCardShadow;
+    border-radius: $portofolioCardBorder;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $lightBlack;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $mediumGrey;
+  }
+
+  &--padding {
+    padding: 50px 0 94px 0;
+  }
+
+  &__logo-item {
+    fill: #afb1b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+
+    &:focus {
+      border-color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+  &__logo {
+    &:hover {
+      fill: $colorBlue;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+
+    &:focus {
+      fill: $colorBlue;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+
+  &--gap {
+    gap: 94px;
+    padding: 60px 0;
+  }
+
+  &--flex-direction {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title--color-white {
+    color: $colorWhite;
+  }
+
+  &--margin {
+    gap: 12px;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 0 0 0 15px;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__send-btn {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $colorWhite;
+    background: $colorBlue;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    padding: 10px 80px 10px 43px;
+    margin: 0 auto 0 auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: $pageCursor;
+    transition: $pageTransition;
+  }
+
+  &__send-icon {
+    fill: $colorWhite;
+    position: absolute;
+    top: 10px;
+    left: 148px;
+  }
+
+  &--margin-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 94px auto 50px auto;
+    padding: 0;
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    letter-spacing: 0.06em;
+    padding: 6px 22px;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background: $colorBlue;
+    color: $colorWhite;
+    cursor: $pageCursor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: $pageTransition;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+    margin-bottom: 94px;
+  }
+
+  &__portofolio-card {
+    border: $studioCardBorder;
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 294px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  &__definition {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: $mediumGrey;
+    padding: 20px 0 0 24px;
+    margin: 0;
+  }
+
+  &__type {
+    font-size: 16px;
+    line-height: 30px;
+    color: $mediumGrey;
+    padding: 4px 0 24px 24px;
+    margin: 0;
+  }
+
+  &__img:focus,
+  &__img:hover .grid__overaly {
+    transform: translatey(0);
+    transition: $pageTransition;
+  }
+
+  &__overaly {
+    font-size: 18px;
+    line-height: 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    color: var(--white);
+    background: rgba(33, 150, 243, 0.9);
+    overflow: hidden;
+    transform: translatey(101%);
+    transition: $pageTransition;
+  }
+
+  &__overaly-text {
+    margin: 0;
+    padding: 63px 24px 91px 24px;
+  }
+}
+
+.media-grid {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 16px auto 30px auto;
+
+  &__btn {
+    background: $colorWhite;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    border: none;
+    transition: $pageTransition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+
+    &:focus {
+      background-color: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+    }
+  }
+
+  &__icon {
+    fill: #afb1b8;
+    &:hover {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+      stroke: none;
+    }
+    &:focus {
+      fill: $hoverColor;
+      transition: $pageTransition;
+      cursor: $pageCursor;
+      stroke: none;
+    }
+  }
+
+  &__btn--background {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &__icon--color {
+    fill: $colorWhite;
+  }
+}
+
+.footer-section {
+  background: $darkGrey;
+}

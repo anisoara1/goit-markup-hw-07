@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Studio</title>
+  </head>
+  <body class="studio-page">
+    <header class="header-section">
+      <div class="container">
+        <div class="header">
+          <a class="logo" href="webstudio.com"
+            ><span class="logo__span">Web</span>Studio</a
+          >
+          <nav class="navigate">
+            <ul class="navigate__list">
+              <li>
+                <a class="navigate__item-studio" href="index.html">Studio</a>
+              </li>
+              <li>
+                <a class="navigate__item-portofolio" href="portofolio.html"
+                  >Portofolio</a
+                >
+              </li>
+              <li>
+                <a class="navigate__item" href="#contact">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact contact--flex-direction">
+            <li>
+              <a class="contact__item" href="mailto:info@devstudio.com">
+                <svg class="contact__icon" width="16" height="12">
+                  <use href="images/icons.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="contact__item" href="tel:+12127724150">
+                <svg class="contact__icon" width="10" height="16">
+                  <use href="images/icons.svg#icon-smartphone"></use></svg
+                >+1 212-772-4150</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first-section">
+        <div class="container">
+          <div class="main">
+            <h1 class="main__title">
+              EFFECTIVE SOLUTIONS FOR <br />
+              YOUR BUSINESS
+            </h1>
+            <button class="main__btn" type="button" data-modal-open>
+              Request our service
+            </button>
+          </div>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal__btn" type="button" data-modal-close>
+                <svg width="30" height="30">
+                  <svg class="modal__icon" width="11" height="11" x="3" y="7">
+                    <use href="images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </svg>
+              </button>
+              <form class="form" name="contact-form" autocomplete="on">
+                <h3>Leave your information and we'll call you back</h3>
+                <label class="form__label"
+                  >Name
+                  <svg class="form__icon" width="12" height="12">
+                    <use href="images/icons.svg#icon-name"></use>
+                  </svg>
+                  <input class="form__input" type="text" name="name" />
+                </label>
+                <label class="form__label"
+                  >Telephone
+                  <svg class="form__icon" width="13" height="13">
+                    <use href="images/icons.svg#icon-telephone"></use>
+                  </svg>
+                  <input class="form__input" type="number" name="telephone" />
+                </label>
+                <label class="form__label"
+                  >E-mail
+                  <svg class="form__icon" width="15" height="12">
+                    <use href="images/icons.svg#icon-email"></use>
+                  </svg>
+                  <input class="form__input" type="email" name="email" />
+                </label>
+                <label class="form__label"
+                  >Comments
+                  <textarea
+                    class="form__textarea"
+                    name="feedback"
+                    rows="7"
+                    placeholder="Enter the text"
+                  ></textarea>
+                </label>
+                <label class="form-terms">
+                  <input type="checkbox" />
+                  <span class="form-terms__box-icon"></span>
+                  <svg class="form-terms__checkmark" width="13" height="10">
+                    <use href="images/icons.svg#icon-checkmark"></use>
+                  </svg>
+                  I agree with the letter and accept the<span class="form__span"
+                    >Terms and Conditions</span
+                  >
+                </label>
+              </form>
+              <button class="form__btn" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <ul class="grid">
+            <li>
+              <svg class="grid__icon" width="270" height="120">
+                <svg width="65.32" height="70" x="102.34" y="25">
+                  <use href="images/icons.svg#icon-antenna-1"></use>
+                </svg>
+              </svg>
+              <h3 class="grid__title">ATTENTION TO DETAILS</h3>
+              <p class="grid__description">
+                We go into all the details and processes of your business to
+                develop a customized solution.
+              </p>
+            </li>
+            <li>
+              <svg class="grid__icon" width="270" height="120">
+                <svg width="66.96" height="70" x="102.34" y="25">
+                  <use href="images/icons.svg#icon-clock-1"></use>
+                </svg>
+              </svg>
+              <h3 class="grid__title">PUNCTUALITY</h3>
+              <p class="grid__description">
+                With us, you can feel safe and secure. An important principle of
+                the company: respect your time and deadlines.
+              </p>
+            </li>
+            <li>
+              <svg class="grid__icon" width="270" height="120">
+                <svg width="70" height="53.69" x="102.34" y="25">
+                  <use href="images/icons.svg#icon-diagram-1"></use>
+                </svg>
+              </svg>
+              <h3 class="grid__title">PLANNING</h3>
+              <p class="grid__description">
+                You will be able to observe and participate in every phase of
+                solution development and implementation.
+              </p>
+            </li>
+            <li>
+              <svg class="grid__icon" width="270" height="120">
+                <svg width="70" height="70" x="102.34" y="25">
+                  <use href="images/icons.svg#icon-astronaut-1"></use>
+                </svg>
+              </svg>
+              <h3 class="grid__title">MODERN TECHNOLOGIES</h3>
+              <p class="grid__description">
+                We use innovative tools to solve assigned tasks. It's time to
+                simplify work processes.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Product images-->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">What we do</h2>
+          <ul class="grid">
+            <li class="grid__item">
+              <img
+                class="grid__img"
+                src="images/img1.jpg"
+                alt="Working at desktop"
+                width="370"
+                height="294"
+              />
+              <p class="grid__title grid__title--label">DESKTOP APPS</p>
+            </li>
+            <li class="grid__item">
+              <img
+                class="grid__img"
+                src="images/img2.jpg"
+                alt="Laptop and telephone"
+                width="370"
+                height="294"
+              />
+              <p class="grid__title grid__title--label">MOBILE APPS</p>
+            </li>
+            <li class="grid__item">
+              <img
+                class="grid__img"
+                src="images/img3.jpg"
+                alt="Working on tablet"
+                width="370"
+                height="294"
+              />
+              <p class="grid__title grid__title--label">DESIGN SOLUTIONS</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Team members-->
+      <section class="section section--grey-background">
+        <div class="container">
+          <h2 class="section__title section-title--padding">Our Team</h2>
+          <ul class="grid">
+            <li class="grid__card">
+              <img
+                src="images/photo1.jpg"
+                alt="Product Designer's photo"
+                width="270"
+                height="260"
+              />
+              <h3 class="grid__name">Christopher Walker</h3>
+              <h4 class="grid__text">Product Designer</h4>
+              <div>
+                <ul class="media-grid">
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-instagram-2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="23"
+                        height="19"
+                        x="12"
+                        y="13.88"
+                      >
+                        <use href="images/icons.svg#icon-twitter-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="32"
+                        x="17.16"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-facebook-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-linkedin-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="grid__card">
+              <img
+                src="images/photo2.jpg"
+                alt="Frontend Developer's photo"
+                width="270"
+                height="260"
+              />
+              <h3 class="grid__name">Kylie Evans</h3>
+              <h4 class="grid__text">Frontend Developer</h4>
+              <div>
+                <ul class="media-grid">
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-instagram-2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="23"
+                        height="19"
+                        x="12"
+                        y="13.88"
+                      >
+                        <use href="images/icons.svg#icon-twitter-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="32"
+                        x="17.16"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-facebook-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-linkedin-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="grid__card">
+              <img
+                src="images/photo3.jpg"
+                alt="Marketing personal's photo"
+                width="270"
+                height="260"
+              />
+              <h3 class="grid__name">Ryan Harris</h3>
+              <h4 class="grid__text">Marketing</h4>
+              <div>
+                <ul class="media-grid">
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-instagram-2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="23"
+                        height="19"
+                        x="12"
+                        y="13.88"
+                      >
+                        <use href="images/icons.svg#icon-twitter-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="32"
+                        x="17.16"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-facebook-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-linkedin-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="grid__card">
+              <img
+                src="images/photo4.jpg"
+                alt="UI Designer's photo"
+                width="270"
+                height="260"
+              />
+              <h3 class="grid__name">Tyler Moore</h3>
+              <h4 class="grid__text">UI Designer</h4>
+              <div>
+                <ul class="media-grid">
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-instagram-2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="23"
+                        height="19"
+                        x="12"
+                        y="13.88"
+                      >
+                        <use href="images/icons.svg#icon-twitter-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="32"
+                        x="17.16"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-facebook-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="media-grid__btn" type="button">
+                      <svg
+                        class="media-grid__icon"
+                        width="20"
+                        height="20"
+                        x="12"
+                        y="12"
+                      >
+                        <use href="images/icons.svg#icon-linkedin-1"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="customer-section">
+            <h2 class="section__title">Regular Customers</h2>
+            <ul class="grid grid--padding">
+              <li class="grid__logo-item">
+                <svg class="grid__logo" width="106" height="60">
+                  <use href="images/icons.svg#icon-Union1"></use>
+                </svg>
+              </li>
+              <li class="grid__logo-item">
+                <svg class="grid__logo" width="106" height="60">
+                  <use href="images/icons.svg#icon-Logo2"></use>
+                </svg>
+              </li>
+              <li class="grid__logo-item">
+                <svg class="grid__logo" width="106" height="60">
+                  <use href="images/icons.svg#icon-Logo3"></use>
+                </svg>
+              </li>
+              <li class="grid__logo-item">
+                <svg class="grid__logo" width="106" height="60">
+                  <use href="images/icons.svg#icon-Logo4"></use>
+                </svg>
+              </li>
+              <li class="grid__logo-item">
+                <svg class="grid__logo" width="106" height="60">
+                  <use href="images/icons.svg#icon-Logo6"></use>
+                </svg>
+              </li>
+              <li class="grid__logo-item">
+                <svg class="grid__logo" width="106" height="60">
+                  <use href="images/icons.svg#icon-Logo7"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--Logo and adress-->
+    <footer>
+      <section class="footer-section">
+        <div class="container">
+          <div class="grid grid--gap">
+            <div>
+              <a class="logo logo--color-white" href="webstudio.com"
+                ><span class="logo__span">Web</span>Studio</a
+              >
+              <address class="address">
+                <ul class="contact">
+                  <li class="contact__address-item">
+                    695 Park Ave, NY 10065, USA
+                  </li>
+                  <li>
+                    <a
+                      class="contact__item contact__item--color-light"
+                      href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="contact__item contact__item--color-light"
+                      href="tel:+12127724150"
+                      >+1 212-772-4150</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="grid grid--flex-direction">
+              <h3 class="grid__title grid__title--color-white">Find us on</h3>
+              <ul class="media-grid">
+                <li>
+                  <button
+                    class="media-grid__btn media-grid__btn--background"
+                    type="button"
+                  >
+                    <svg
+                      class="media-grid__icon media-grid__icon--color"
+                      width="20"
+                      height="20"
+                      x="12"
+                      y="12"
+                    >
+                      <use href="images/icons.svg#icon-instagram-2"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="media-grid__btn media-grid__btn--background"
+                    type="button"
+                  >
+                    <svg
+                      class="media-grid__ico media-grid__icon--color"
+                      width="23"
+                      height="19"
+                      x="12"
+                      y="13.88"
+                    >
+                      <use href="images/icons.svg#icon-twitter-1"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="media-grid__btn media-grid__btn--background"
+                    type="button"
+                  >
+                    <svg
+                      class="media-grid__icon media-grid__icon--color"
+                      width="20"
+                      height="32"
+                      x="17.16"
+                      y="12"
+                    >
+                      <use href="images/icons.svg#icon-facebook-1"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="media-grid__btn media-grid__btn--background"
+                    type="button"
+                  >
+                    <svg
+                      class="media-grid__icon media-grid__icon--color"
+                      width="20"
+                      height="20"
+                      x="12"
+                      y="12"
+                    >
+                      <use href="images/icons.svg#icon-linkedin-1"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <form class="grid grid--flex-direction">
+              <h3 class="grid__title grid__title--color-white">
+                Subscribe to the newsletter
+              </h3>
+              <div class="grid grid--margin">
+                <input
+                  class="grid__input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+                <button class="grid__send-btn" type="submit">
+                  Subscribe
+                  <svg class="grid__send-icon" width="24" height="24">
+                    <use href="images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./modal.js"></script>
+  </body>
+</html>
